@@ -8,10 +8,21 @@ import * as styles from "./controls.styles";
 import { IProps } from "./controls.interface";
 
 const Controls = (props: IProps) => {
+  const iconStyles = styles.icon(props);
   return (
     <div className={styles.container(props)}>
-      <FontAwesomeIcon icon={faChevronLeft} size="lg" />
-      <FontAwesomeIcon icon={faChevronRight} size="lg" />
+      <FontAwesomeIcon
+        icon={faChevronLeft}
+        size="3x"
+        onClick={props.onPrevClick}
+        className={iconStyles}
+      />
+      <FontAwesomeIcon
+        icon={faChevronRight}
+        size="3x"
+        onClick={props.onNextClick}
+        className={iconStyles}
+      />
     </div>
   );
 };

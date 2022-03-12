@@ -6,7 +6,8 @@ const modIncr = (n: number, mod: number, incr = 1) => {
 };
 
 const modDecr = (n: number, mod: number, decr = 1) => {
-  return (n - decr) % mod;
+  const newValue = (n - decr) % mod;
+  return newValue > -1 ? newValue : mod + newValue;
 };
 
 export function useCarousel(

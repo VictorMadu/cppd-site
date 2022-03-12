@@ -13,8 +13,6 @@ const Layout = (props: IProps) => {
     activitiesInPhotos.length
   );
 
-  console.log("currIndex", currIndex);
-
   return (
     <div>
       <Header />

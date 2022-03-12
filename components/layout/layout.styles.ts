@@ -6,7 +6,7 @@ export const carousel = (props: unknown, otherNames?: string) => ({
     "h-[25rem] sm:h-[30rem] md:h-[35rem] lg:h-[40rem]",
     otherNames
   ),
-  margin: classNames("mx-[2%] mt-4"),
+  margin: classNames("mt-1"),
 });
 
 export const carouselImg = (props: unknown, otherNames?: string) => ({

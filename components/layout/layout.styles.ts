@@ -13,10 +13,3 @@ export const carouselImg = (props: unknown, otherNames?: string) => ({
   width: classNames("w-full"),
   height: classNames("h-full"),
 });
-
-export const carouselItem = (props: unknown, otherNames?: string) => ({
-  setUp: classNames(),
-  enter: classNames("opacity-0"),
-  in: classNames("opacity-1"),
-  out: classNames("opacity-0"),
-});

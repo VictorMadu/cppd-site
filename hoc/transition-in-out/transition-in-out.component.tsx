@@ -2,7 +2,7 @@ import classNames from "classnames";
 import React from "react";
 import { useTransition } from "../../hooks/transition";
 import { ExcludeProp } from "../../types";
-import If from "../if/if.component";
+import If from "../../core/if/if.component";
 import { IProps, IWrappedProps } from "./transition-in-out.interface";
 
 const WithTransition = <T extends IWrappedProps = IWrappedProps>(

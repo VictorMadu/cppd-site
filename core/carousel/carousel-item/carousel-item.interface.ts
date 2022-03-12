@@ -1,7 +1,11 @@
 import { ExactlyOrArray } from "../../../types";
 
 export interface IProps {
-  className: string;
-  onTransitionEnd: () => void;
+  type: string;
   children: ExactlyOrArray<JSX.Element>;
+}
+
+export interface ITransitionProps {
+  show: boolean;
+  transitionTime?: string;
 }

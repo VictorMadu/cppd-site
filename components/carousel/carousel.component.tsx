@@ -2,14 +2,33 @@ import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 import { useCarousel } from "../../hooks/carousel";
+import c from "../../constants";
+import * as styles from "./carousel.styles";
+import { IProps } from "../header/header.interface";
 
-const TOTAL_IMGS = 4;
-const DISPLAY_TIME = 5000;
-const Carousel = () => {
-  const { currIndex } = useCarousel(TOTAL_IMGS, DISPLAY_TIME);
+const Carousel = (props: IProps) => {
+  const { currIndex } = useCarousel(
+    c.carousel.total_imgs,
+    c.carousel.display_time
+  );
+
   return (
-    <div className="relative m-1">
-      <ul className="relative w-full h-[25rem] sm:h-[30rem] md:h-[35rem] lg:h-[40rem]">
+    <Carousel 
+      items={
+        []
+      }
+      displayTime={Carousel.default.displayTime}
+      transitionTime={Carousel.default.transitionTime}
+      styleClassNames={{
+        width: 'w-full',
+        height: 
+      }}
+    />
+  )
+
+  return (
+    <div className={styles.container(props)}>
+      <ul className={styles.imgLists(props)}>
         <li
           className={classNames(
             "absolute top-0 left-0 w-full h-full transition-opacity duration-[2400ms]",
@@ -48,7 +67,7 @@ const Carousel = () => {
         </li>
         <li
           className={classNames(
-            "absolute top-0 left-0 w-full h-full transition-opacity  duration-[2400ms]",
+            "absolute top-0 left-0 w-full h-full transition-opacity  duration-[3000ms]",
             {
               "opacity-1": currIndex === 2,
               "opacity-0": currIndex !== 2,

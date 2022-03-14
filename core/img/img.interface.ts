@@ -1,7 +1,7 @@
 export interface IProps {
   src: string;
   alt?: string;
-  imgStyles: {
+  imgStyles?: {
     width?: string;
     height?: string;
   };

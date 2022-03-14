@@ -1,39 +1,25 @@
 import React from "react";
-import Carousel from "../../core/carousel";
 import Header from "../header";
-import activitiesInPhotos from "../../languages/en/activities_in_photos";
-import map from "lodash/map";
-import * as styles from "./layout.styles";
 import { IProps } from "./layout.interface";
-import Img from "../../core/img/img.components";
-import { useCarousel } from "../../hooks/carousel";
+import PreambleSection from "../preamble-section";
+import ActivitesCarousel from "../activities-carousel/activities-carousel.component";
+import ActivitesAndEffortsSection from "../activities-and-efforts-section";
+import ResearchAreasSection from "../research_areas_section";
+import MembersSection from "../members_section";
+import AboutSection from "../about_section/about_section.component";
+import ContactSection from "../contact_section";
 
 const Layout = (props: IProps) => {
-  const { currIndex, displayPrevAction, displayNextAction } = useCarousel(
-    activitiesInPhotos.length
-  );
-
   return (
     <div>
       <Header />
-      <Carousel
-        styleClassNames={styles.carousel(props)}
-        onPrevClick={displayPrevAction}
-        onNextClick={displayNextAction}
-      >
-        {map(activitiesInPhotos, (aPhoto, index) => {
-          return (
-            <Carousel.Item
-              key={index}
-              type={Carousel.fadeShow({
-                show: currIndex === index,
-              })}
-            >
-              <Img src={aPhoto.photo} imgStyles={styles.carouselImg(props)} />
-            </Carousel.Item>
-          );
-        })}
-      </Carousel>
+      <ActivitesCarousel />
+      <PreambleSection />
+      <ActivitesAndEffortsSection />
+      <ResearchAreasSection />
+      <MembersSection />
+      <AboutSection />
+      <ContactSection />
     </div>
   );
 };

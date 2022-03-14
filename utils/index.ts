@@ -1,3 +1,3 @@
-export function isString(obj: unknown) {
-  return typeof obj === "string";
+export function getIdHref(id: string) {
+  return "#" + id;
 }

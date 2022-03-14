@@ -1,6 +1,6 @@
 import classNames from "classnames";
 import React from "react";
-import { useTransition } from "../../hooks/transition";
+import { useTransition } from "../../hooks/useTransition";
 import { ExcludeProp } from "../../types";
 import If from "../../core/if/if.component";
 import { IProps, IWrappedProps } from "./transition-in-out.interface";

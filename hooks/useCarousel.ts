@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import c from "../constants";
+import { carousel } from "../constants";
 
 const modIncr = (n: number, mod: number, incr = 1) => {
   return (n + incr) % mod;
@@ -12,8 +12,8 @@ const modDecr = (n: number, mod: number, decr = 1) => {
 
 export function useCarousel(
   noOfImgs: number,
-  displayTime = c.carousel.display_time,
-  startIndex = c.carousel.start_index
+  displayTime = carousel.display_time,
+  startIndex = carousel.start_index
 ) {
   const [currIndex, setCurrIndex] = useState(startIndex);
   useEffect(() => {

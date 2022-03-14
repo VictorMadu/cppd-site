@@ -1,16 +1,17 @@
 import classNames from "classnames";
-import { IProps } from "./header.interface";
+import { IProps } from "./nav_container.interface";
 
 export const container = (props: IProps) =>
   classNames(
     "bg-white",
-    "space-y-2",
-    "shadow-md",
-    "divide-y",
-    "divide-slate-300/60",
-    "top-0",
-    "transition-all",
-    "duration-lg"
+    "text-sm md:text-base lg:text-lg",
+    "font-bold",
+    "tracking-wider",
+    "uppercase",
+    "flex ",
+    "justify-center",
+    "items-center ",
+    "overflow-x-auto"
   );
 
 export const logoContainer = (props: IProps) =>
@@ -22,7 +23,7 @@ export const logoContainer = (props: IProps) =>
     "font-bold",
     "2xl:text-5xl",
     "px-[2%]",
-    "py-2"
+    "py-3"
   );
 
 export const imgStyles = (props: IProps) => ({
@@ -35,28 +36,15 @@ export const fullName = (props: IProps) =>
     "uppercase",
     "hidden lg:inline",
     "text-2xl xl:text-3xl 2xl:text-4xl",
-    "text-pri-700"
+    "text-violet-700"
   );
 
 export const shortName = (props: IProps) =>
   classNames(
-    "text-pri-700 lg:text-zinc-900 lg:text-opacity-80 text-2xl lg:text-lg xl:text-xl 2xl:text-3xl lg:italic"
+    "text-violet-700 lg:text-zinc-900 lg:text-opacity-80 text-2xl lg:text-lg xl:text-xl 2xl:text-3xl lg:italic"
   );
 
-export const navItems = (props: IProps) =>
-  classNames(
-    "bg-white",
-    "text-sm md:text-base lg:text-lg",
-    "font-bold",
-    "tracking-wider",
-    "uppercase",
-    "flex",
-    "justify-center",
-    "items-center ",
-    "overflow-x-auto"
-  );
-
-export const navItem = (props: IProps) =>
+export const item = (props: IProps) =>
   classNames(
     "px-3",
     "pt-4",
@@ -64,9 +52,6 @@ export const navItem = (props: IProps) =>
     "rounded",
     "border-b-4",
     "border-b-transparent",
-    "hover:border-b-pri-400",
-    "hover:text-pri-900",
-    "focus:border-b-pri-400",
-    "focus:text-pri-900",
+    "hover:border-b-violet-400",
     "cursor-pointer"
   );

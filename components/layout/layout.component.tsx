@@ -8,10 +8,11 @@ import ResearchAreasSection from "../research_areas_section";
 import MembersSection from "../members_section";
 import AboutSection from "../about_section/about_section.component";
 import ContactSection from "../contact_section";
+import * as styles from "./layout.styles";
 
 const Layout = (props: IProps) => {
   return (
-    <div>
+    <div className={styles.container(props)}>
       <Header />
       <ActivitesCarousel />
       <PreambleSection />

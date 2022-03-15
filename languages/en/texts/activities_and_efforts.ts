@@ -10,8 +10,6 @@ const activitiesAndEfforts = {
 
       " Continuing, CPPD has gone beyond mediation in that conflict - using research, developing more holistic approaches to peaceful transformation of conflicts and the structures, attitudes and cultures underlying them. Violence will be reproduced if they fester and the causes are not sufficiently rooted out.",
 
-      "Continuing, CPPD has gone beyond mediation in that conflict - using research, developing more holistic approaches to peaceful transformation of conflicts and the structures, attitudes and cultures underlying them. Violence will be reproduced if they fester and the causes are not sufficiently rooted out.",
-
       "Depending on availability of funds, CPPD works among and involve a variety of social actors in the transformation of conflict - building peace from all levels, from the grassroots up and bringing the fundamental shift from cultures of war to cultures of peace.",
     ],
     [

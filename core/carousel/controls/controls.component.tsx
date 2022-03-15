@@ -13,13 +13,13 @@ const Controls = (props: IProps) => {
     <div className={styles.container(props)}>
       <FontAwesomeIcon
         icon={faChevronLeft}
-        size="3x"
+        size="1x"
         onClick={props.onPrevClick}
         className={iconStyles}
       />
       <FontAwesomeIcon
         icon={faChevronRight}
-        size="3x"
+        size="1x"
         onClick={props.onNextClick}
         className={iconStyles}
       />

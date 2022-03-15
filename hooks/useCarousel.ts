@@ -17,16 +17,17 @@ export function useCarousel(
 ) {
   const [currIndex, setCurrIndex] = useState(startIndex);
   useEffect(() => {
-    const intervalId = setInterval(() => {
+    const intervalId = setTimeout(() => {
       setCurrIndex((s) => modIncr(s, noOfImgs));
     }, displayTime);
-    return () => clearInterval(intervalId);
-  }, [displayTime, noOfImgs]);
+    return () => clearTimeout(intervalId);
+  }, [currIndex, displayTime, noOfImgs]);
 
   return {
     currIndex,
     startIndex,
     displayTime,
+    displayIndex: setCurrIndex,
     displayPrevAction: () => setCurrIndex((s) => modDecr(s, noOfImgs)),
     displayNextAction: () => setCurrIndex((s) => modIncr(s, noOfImgs)),
   };

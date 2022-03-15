@@ -3,6 +3,8 @@ import * as styles from "./carousel.styles";
 import { IProps } from "./carousel.interface";
 import Controls from "./controls/controls.component";
 import CarouselItem from "./carousel-item/carousel-item.component";
+import Circle from "./circle";
+import CircleContainer from "./circle_container";
 
 const Carousel = (props: IProps) => {
   return (
@@ -19,6 +21,8 @@ const Carousel = (props: IProps) => {
 };
 
 Carousel.Item = CarouselItem;
+Carousel.CircleContainer = CircleContainer;
+Carousel.Circle = Circle;
 
 // Carousel show types
 Carousel.fadeShow = styles.fadeShow;

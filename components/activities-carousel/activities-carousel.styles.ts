@@ -20,6 +20,22 @@ export const carouselTextContainer = (props: unknown) => classNames("relative");
 // TODO: Transition in from right when props.show is changed to true
 // Transition out from left when props.show is changed to false
 export const carouselTextGroup = (props: { show: boolean }) =>
-  classNames("transition-all", "duration-[2400ms]", {});
+  classNames(
+    "transition-all",
+    "duration-[2400ms]",
+    {},
+    "px-[2%]",
+    "text-justify"
+  );
 
-export const carouselText = (props: unknown) => classNames();
+export const carouselText = (props: unknown) => classNames("basis-full");
+
+export const overlayImg = (props: unknown) =>
+  classNames(
+    "absolute",
+    "top-0",
+    "left-0",
+    "h-full",
+    "w-full",
+    "bg-pri-500/10"
+  );

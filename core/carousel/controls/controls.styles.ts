@@ -5,4 +5,4 @@ export const container = (props: IProps, otherNames?: string) =>
   classNames("flex", "justify-between", "px-[4%]", "", "", otherNames);
 
 export const icon = (props: IProps, otherNames?: string) =>
-  classNames("text-slate-50", "shadow-lg");
+  classNames("shadow-xl", "p-3", "bg-white", "rounded-full", "text-pri-900");

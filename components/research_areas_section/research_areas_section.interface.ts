@@ -1,3 +1,5 @@
+export interface IProps {}
+
 export type IText = string;
 
 export type ITextAndLists = {

@@ -5,19 +5,23 @@ import map from "lodash/map";
 import isArray from "lodash/isArray";
 import If from "../../core/if/if.component";
 import Text from "./text";
-import { IText, ITextAndLists } from "./research_areas_section.interface";
+import {
+  IProps,
+  IText,
+  ITextAndLists,
+} from "./research_areas_section.interface";
 import TextAndList from "./text_and_list/text_and_list.component";
 import * as styles from "./research_areas_section.styles";
 import { isString } from "lodash";
 
-const ResearchAreasSection = (props: unknown) => {
+const ResearchAreasSection = (props: IProps) => {
   return (
     <div className={styles.container(props)}>
-      <p>{app.researchAreas}</p>
+      <p className={styles.title(props)}>{app.researchAreas}</p>
       <div>
         {map(researchAreas.areas, (area, index) => (
           <div key={index}>
-            <p>{area.title}</p>
+            <p className={styles.listItemItem(props)}>{area.title}</p>
             <div>
               {map(area.texts, (text, index) => (
                 <If

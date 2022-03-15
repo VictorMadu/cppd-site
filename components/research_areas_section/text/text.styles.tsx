@@ -1,3 +1,3 @@
 import classNames from "classnames";
 
-export const container = (props: unknown) => classNames("");
+export { sectionParagraph as container } from "../../layout/layout.styles";

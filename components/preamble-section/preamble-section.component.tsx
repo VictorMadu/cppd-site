@@ -2,15 +2,18 @@ import { map } from "lodash";
 import React from "react";
 import * as app from "../../languages/en/app";
 import preamble from "../../languages/en/texts/preamble";
+import { IProps } from "./preamble-section.interface";
 import * as styles from "./preamble-section.styles";
 
-const PreambleSection = (props: unknown) => {
+const PreambleSection = (props: IProps) => {
   return (
     <div className={styles.container(props)}>
       <p className={styles.title(props)}>{app.preamble}</p>
       <div className={styles.textContainer(props)}>
         {map(preamble.texts, (text, index) => (
-          <p key={index}>{text}</p>
+          <p key={index} className={styles.paragraph(props)}>
+            {text}
+          </p>
         ))}
       </div>
       <div className={styles.authorDescContainer(props)}>

@@ -1,8 +1,9 @@
 import { Dispatch, SetStateAction } from "react";
+import { ExactlyOrArray } from "../../types";
 
 export interface IProps {
   value: string | symbol;
-  children: JSX.Element;
+  children: ExactlyOrArray<JSX.Element>;
 }
 
 export interface IContext {

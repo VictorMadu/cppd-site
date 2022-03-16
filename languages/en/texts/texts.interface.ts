@@ -1,3 +1,5 @@
+import { ExactlyOne } from "../../../types";
+
 export interface IOrganization {
   name: {
     full: string;
@@ -15,25 +17,53 @@ export interface IOrganization {
     desc: string;
   }[];
   vision: string;
-  mission: IMission;
+  mission: IContainer;
 }
-export type IMission = (IText | IList)[]
+export type IContainer = (IList | IPara | IText)[];
 
-export interface IText {
-  content: string;
-  kind: "paragraph" | "title" | "subTitle" | "bigParagraph";
+export type IParaBase = {
+  type: "para";
+  style?: Partial<{
+    color: IColorStyle;
+    weight: IWeightStyle;
+    transform: ITransformStyle;
+  }>;
+};
+
+export type IParaWithChildren = IParaBase & { children: IText[] };
+
+export type IParaText = IParaBase & { text: string };
+
+export type IPara = IParaWithChildren | IParaText;
+
+export type IText = {
   type: "text";
-}
+  style?: Partial<{
+    color: IColorStyle;
+    weight: IWeightStyle;
+    transform: ITransformStyle;
+  }>;
+  text: string;
+};
 
-type IColorKind = "colored" | "uncolored";
-type ISizeKind = "big" | "normal" | "small";
-type IListKind = IColorKind | ISizeKind | `${IColorKind} ${ISizeKind}` |  `${ISizeKind} ${IColorKind}`
-
-export interface IList {
-  items: {
-    title: string;
-    contents?: (IText | IList)[] 
-  }[]
-  kind: IListKind;
+export type IList = {
   type: "list";
-}
+  style?: Partial<{
+    color: IColorStyle;
+    weight: IWeightStyle;
+    size: ISizeStyle;
+    transform: ITransformStyle;
+    icon: IListIconStyle;
+  }>;
+  items: {
+    text: string;
+    children?: (IList | IPara | IText)[];
+  }[];
+};
+
+export type IType = "list" | "para" | "text";
+export type IColorStyle = "n" | "p";
+export type IWeightStyle = "b" | "n" | "l";
+export type ISizeStyle = "l" | "n" | "s";
+export type IListIconStyle = "p" | "c-d";
+export type ITransformStyle = "u" | "c" | "l";

@@ -12,14 +12,14 @@ const ContactSection = () => {
       </div>
       <div>
         <div>{app.contacts.phone}</div>
-        <div>
+        {/* <div>
           {map(organzation.contacts.phone.numbers, (no, index) => (
             <React.Fragment key={index}>
               <span>{organzation.contacts.phone.country_code}</span>
               <span>{no}</span>
             </React.Fragment>
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   );

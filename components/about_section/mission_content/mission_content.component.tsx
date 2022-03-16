@@ -1,44 +1,31 @@
 import React from "react";
 import map from "lodash/map";
 import { IList, IProps, IText } from "./mission_content.interface";
-import * as styles from "./mission_content.styles";
+import Text from "./text/text.component";
 import If from "../../../core/if/if.component";
+import { IContainer, IPara } from "../../../languages/en/texts/texts.interface";
+import Switch from "../../../core/switch";
+import Para from "./para";
+import List from "./list/list.component";
 
 const MissionContent = (props: IProps) => {
   return (
     <>
-      {map(props.contents, (contentProp, index) => (
-        <If
-          key={index}
-          cond={contentProp.type === "text"}
-          Component={
-            <p className={styles.text(contentProp as IText)}>
-              {(contentProp as IText).content}
-            </p>
-          }
-          Else={
-            <ul className={styles.listsContainer(contentProp as IList)}>
-              {map((contentProp as IList).items, (item, index) => (
-                <li
-                  key={index}
-                  className={styles.listContainer(contentProp as IList)}
-                >
-                  <p className={styles.listText(contentProp as IList)}>
-                    {item.title}
-                  </p>
-                  <If
-                    cond={!!item.contents}
-                    Component={
-                      <MissionContent
-                        contents={item.contents as (IList | IText)[]}
-                      />
-                    }
-                  />
-                </li>
-              ))}
-            </ul>
-          }
-        />
+      {map(props.contents, (contentProp: IContainer[number], index) => (
+        <Switch value={contentProp.type} key={index}>
+          <Switch.Case
+            compCase={"para"}
+            Component={<Para content={contentProp as IPara} />}
+          />
+          <Switch.Case
+            compCase={"text"}
+            Component={<Text content={contentProp as IText} />}
+          />
+          <Switch.Case
+            compCase={"list"}
+            Component={<List content={contentProp as IList} />}
+          />
+        </Switch>
       ))}
     </>
   );

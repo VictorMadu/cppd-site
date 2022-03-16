@@ -22,5 +22,7 @@ export const listItemItem = (props: IProps) =>
     "text-left",
     "flex",
     "items-center",
-    "mt-5"
+    "mt-5",
+    "leading-6",
+    "mb-1"
   );

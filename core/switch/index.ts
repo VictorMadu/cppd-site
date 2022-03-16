@@ -1,1 +1,1 @@
-export { default } from "./case/case.component";
+export { default } from "./switch.component";

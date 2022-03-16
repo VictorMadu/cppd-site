@@ -9,5 +9,5 @@ export const sectionContainer = (props: IProps) =>
 export const sectionTitle = (props: IProps) =>
   classNames("text-3xl", "font-bold", "text-pri-900/90", "capitalize", "mb-2");
 
-export const sectionParagraph = (props: IProps) =>
-  classNames("first-letter:ml-4", "mb-2", "leading-8");
+export const sectionParagraph = (props: unknown) =>
+  classNames("first-letter:ml-4", "mb-2", "leading-8", "hyphens");

@@ -81,6 +81,12 @@ export type NonNegativeInteger<T extends number> =
             ? never 
             : T;
 
+// TODO: Move this to the bigger types library, tuchi the library and publish. 
+// TODO: There should be a more general way for doing this combo for unlimited number of text
+export type TwoStrCombo<T extends string, U extends string> = T | U | `${T} ${U}` | `${U} ${T}`;
+
+export type ThreeStrCombo<T extends string, U extends string, V extends string> = T | U | V |  `${T} ${U}` | `${T} ${V}` | `${U} ${T}`| `${U} ${V}`  |`${V} ${T}`  |`${V} ${U}`  |   `${T} ${V} ${U}` | `${T} ${U} ${V}` | `${U} ${V} ${T}` | `${U} ${T} ${V}`  | `${V} ${T} ${U}` | `${V} ${U} ${T}`;
+
 // export type ShallowPartial<T, U extends string> = {
 //     [K in keyof T]: CC<T, U> extends {} ? {K?: T[K]} : {K: T[K]}
 // }[keyof T]

@@ -1,7 +1,7 @@
-import { IMission } from "../../../languages/en/texts/texts.interface";
+import { IContainer } from "../../../languages/en/texts/texts.interface";
 
 export interface IProps {
-  contents: IMission;
+  contents: IContainer;
 }
 
 export type { IText, IList } from "../../../languages/en/texts/texts.interface";

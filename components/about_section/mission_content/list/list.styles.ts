@@ -2,18 +2,39 @@ import classNames from "classnames";
 import { arrayize, ClassNameGenerator as CNG } from "../../../../utils";
 import { IList } from "./list.interface";
 
-export const container = (props: IList["style"]) => classNames("my-5");
-export const item = (props: IList["style"]) =>
+export const container = (props: IList["style"]) =>
   CNG.join(
     new CNG()
-      .values("my-3")
       .and("0")
       .values("")
       .and("1")
-      .values("mx-[3%]")
+      .values("mx-[2%]")
       .and("2")
-      .values("mx-[5%]")
-  ).generate(arrayize(props?.margin, "1"));
+      .values("mx-[4%]"),
+    new CNG()
+      .and("0")
+      .values("my-5")
+      .and("1")
+      .values("my-7")
+      .and("2")
+      .values("my-9"),
+
+    new CNG()
+      .and("0")
+      .values("space-y-2")
+      .and("1")
+      .values("space-y-4")
+      .and("2")
+      .values("space-y-6")
+      .and("3")
+      .values("space-y-8")
+  ).generate(
+    arrayize(props?.marginX, "0"),
+    arrayize(props?.marginY, "0"),
+    arrayize(props?.spaceBtw, "0")
+  );
+
+export const item = (props: IList["style"]) => new CNG().generate([]);
 
 export const itemTextContainer = (props: IList["style"]) => classNames("flex");
 
@@ -30,6 +51,7 @@ export const itemText = (props: IList["style"]) =>
       "text-justify",
       "leading-6"
     ),
+    new CNG().and("y").values("flex", "before:translate-y-full"),
     new CNG()
       .and("p")
       .values("before:bg-pri-900")
@@ -51,6 +73,7 @@ export const itemText = (props: IList["style"]) =>
       .values("font-light")
   ).generate(
     arrayize(),
+    arrayize(props?.seperateIcon, "n"),
     arrayize(props?.color, "n"),
     arrayize(props?.size, "n"),
     arrayize(props?.weight, "n")

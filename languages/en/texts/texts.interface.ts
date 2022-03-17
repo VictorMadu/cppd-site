@@ -54,7 +54,10 @@ export type IList = {
     size: ISizeStyle;
     transform: ITransformStyle;
     icon: IListIconStyle;
-    margin: IMarginStyle;
+    marginX: IMarginXStyle;
+    marginY: IMarginYStyle;
+    spaceBtw: ISpaceBtwStyle;
+    seperateIcon: ISeperateIconStyle;
   }>;
   items: {
     text: string;
@@ -68,4 +71,7 @@ export type IWeightStyle = "b" | "n" | "l";
 export type ISizeStyle = "l" | "n" | "s";
 export type IListIconStyle = "p" | "c-d";
 export type ITransformStyle = "u" | "c" | "l";
-export type IMarginStyle = "0" | "1" | "2";
+export type IMarginXStyle = "0" | "1" | "2";
+export type IMarginYStyle = "0" | "1" | "2";
+export type ISpaceBtwStyle = "0" | "1" | "2" | "3";
+export type ISeperateIconStyle = "y" | "n";

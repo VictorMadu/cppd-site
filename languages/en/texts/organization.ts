@@ -90,6 +90,9 @@ const organzation: IOrganization = {
       ],
       style: {
         color: "p",
+        marginX: "1",
+        spaceBtw: "0",
+        seperateIcon: "y",
       },
       type: "list",
     },
@@ -106,7 +109,7 @@ const organzation: IOrganization = {
             {
               text:
                 "Research is an important guide to development actions; hence, it is one of the major primary tools CPPD uses in its work to solve social problems as well as for project identification and designing interventions. Apart from embarking on and advancing multi-sectoral researches, the organization supports its individual members in their researches that are of high quality and that can impact positively on policy and development. The following are our research areas for which funds are solicited to support (See the description of research areas)",
-              type: "text",
+              type: "para",
             },
             {
               items: [
@@ -129,13 +132,15 @@ const organzation: IOrganization = {
               style: {
                 color: "p",
                 size: "n",
+                marginX: "1",
+                seperateIcon: "y",
               },
               type: "list",
             },
             {
               text:
                 "We are also encouraging high quality of research in Nigerian universities and hope to introduce best research award for higher degree thesis and dissertations in social sciences and humanities, especially in the field of development, policy, human rights, environment, conflict and peace, economic growth and governance",
-              type: "text",
+              type: "para",
             },
           ],
         },
@@ -145,7 +150,7 @@ const organzation: IOrganization = {
             {
               text:
                 "Safety is the hallmark of freedom from fear, violence and ignorance while well being is the target of freedom from want, anxiety, deprivation and disease. We are not only concerned with threats of violence but also physical threats like poverty, disease, illiteracy, economic, political and civil rights.",
-              type: "text",
+              type: "para",
             },
             {
               items: [
@@ -213,6 +218,7 @@ const organzation: IOrganization = {
               style: {
                 color: "p",
                 size: "n",
+                spaceBtw: "2",
               },
               type: "list",
             },
@@ -279,7 +285,8 @@ const organzation: IOrganization = {
         color: "p",
         weight: "b",
         size: "l",
-        margin: "0",
+        marginY: "1",
+        spaceBtw: "3",
       },
       type: "list",
     },

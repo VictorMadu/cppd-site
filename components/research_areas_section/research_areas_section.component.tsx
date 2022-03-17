@@ -1,44 +1,16 @@
 import React from "react";
 import * as app from "../../languages/en/app";
 import { researchAreas } from "../../languages/en/texts/research-areas";
-import map from "lodash/map";
-import isArray from "lodash/isArray";
-import If from "../../core/if/if.component";
-import Text from "./text";
-import {
-  IProps,
-  IText,
-  ITextAndLists,
-} from "./research_areas_section.interface";
-import TextAndList from "./text_and_list/text_and_list.component";
+import { IProps } from "./research_areas_section.interface";
 import * as styles from "./research_areas_section.styles";
-import { isString } from "lodash";
+import MissionContent from "../about_section/mission_content/mission_content.component";
 
 const ResearchAreasSection = (props: IProps) => {
   return (
     <div className={styles.container(props)}>
       <p className={styles.title(props)}>{app.researchAreas}</p>
       <div>
-        {map(researchAreas.areas, (area, index) => (
-          <div key={index}>
-            <p className={styles.listItemItem(props)}>{area.title}</p>
-            <div>
-              {map(area.texts, (text, index) => (
-                <If
-                  key={index}
-                  cond={isString(text)}
-                  Component={<Text text={text as IText} />}
-                  Else={
-                    <TextAndList
-                      text={(text as ITextAndLists).body}
-                      lists={(text as ITextAndLists).lists}
-                    />
-                  }
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+        <MissionContent contents={researchAreas.contents} />
       </div>
     </div>
   );

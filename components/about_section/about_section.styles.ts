@@ -8,10 +8,13 @@ export const title = layoutStyles.sectionTitle;
 export const linksContainer = (props: IProps) =>
   classNames("flex", "justify-center");
 
+export const contentContainer = (props: IProps) =>
+  classNames("space-y-6", "mt-4");
+
 export const idGroup = (props: IProps) => classNames();
 
 export const idGroupTitle = (props: IProps) =>
-  classNames("mt-4", "text-xl", "font-bold", "capitalize", "mb-2");
+  classNames("text-lg", "font-bold", "capitalize", "mb-2");
 
 export const structureContainer = (props: IProps) => classNames("space-y-1");
 export const structureGroup = (props: IProps) => classNames();

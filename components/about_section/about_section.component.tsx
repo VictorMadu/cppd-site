@@ -26,6 +26,7 @@ const AboutSection = (props: IProps) => {
           active={false}
         />
       </ul>
+      <div className={styles.contentContainer(props)}>
       <div id={aboutSectionIds.structure} className={styles.idGroup(props)}>
         <p className={styles.idGroupTitle(props)}>{app.structure}</p>
         <div className={styles.structureContainer(props)}>
@@ -44,26 +45,9 @@ const AboutSection = (props: IProps) => {
       <div id={aboutSectionIds.mission} className={styles.idGroup(props)}>
         <p className={styles.idGroupTitle(props)}>{app.mission}</p>
         <MissionContent contents={organzation.mission} />
-        {/* TODO: Use that Text and TextAndList components */}
-
-        {/* <div>
-          <p>{organzation.mission.achieve_peace_and_dev}</p>
-        </div>
-        <ul>
-          {map(
-            organzation.mission.achieve_peace_and_dev_list,
-            (text, index) => (
-              <li key={index}>
-                <p>{text}</p>
-              </li>
-            )
-          )}
-        </ul>
-        <div>
-          <p>{organzation.mission.achieve_peace_and_dev}</p>
-        </div> */}
       </div>
     </div>
+      </div>
   );
 };
 

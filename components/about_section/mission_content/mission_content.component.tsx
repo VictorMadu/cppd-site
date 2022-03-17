@@ -2,7 +2,6 @@ import React from "react";
 import map from "lodash/map";
 import { IList, IProps, IText } from "./mission_content.interface";
 import Text from "./text/text.component";
-import If from "../../../core/if/if.component";
 import { IContainer, IPara } from "../../../languages/en/texts/texts.interface";
 import Switch from "../../../core/switch";
 import Para from "./para";

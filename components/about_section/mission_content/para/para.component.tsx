@@ -6,20 +6,15 @@ import map from "lodash/map";
 import * as styles from "./para.styles";
 
 const Para = (props: IProps) => {
+  const containerStyle = styles.container(props.content.style);
   return (
     <If
       cond={(props.content as any).text} // if text exists
       Component={
-        <p className={styles.container((props.content as IParaText).style)}>
-          {(props.content as IParaText).text}
-        </p>
+        <p className={containerStyle}>{(props.content as IParaText).text}</p>
       }
       Else={
-        <p
-          className={styles.container(
-            (props.content as IParaWithChildren).style
-          )}
-        >
+        <p className={containerStyle}>
           {map(
             (props.content as IParaWithChildren).children,
             (child, index) => (

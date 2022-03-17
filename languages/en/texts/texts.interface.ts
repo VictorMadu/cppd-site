@@ -12,11 +12,8 @@ export interface IOrganization {
       numbers: string[];
     };
   };
-  structure: {
-    rank: string;
-    desc: string;
-  }[];
-  vision: string;
+  structure: IContainer;
+  vision: IContainer;
   mission: IContainer;
 }
 export type IContainer = (IList | IPara | IText)[];
@@ -67,7 +64,7 @@ export type IList = {
 
 export type IType = "list" | "para" | "text";
 export type IColorStyle = "n" | "p";
-export type IWeightStyle = "b" | "n" | "l";
+export type IWeightStyle = "b" | "s-b" | "n" | "l";
 export type ISizeStyle = "l" | "n" | "s";
 export type IListIconStyle = "p" | "c-d";
 export type ITransformStyle = "u" | "c" | "l";

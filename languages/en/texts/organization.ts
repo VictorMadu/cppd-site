@@ -14,32 +14,62 @@ const organzation: IOrganization = {
   },
   structure: [
     {
-      rank: "Board of Trustees",
-      desc: "The highest policy-making body, headed by the chairman.",
-    },
-    {
-      rank: "Council of Advisers",
-      desc:
-        "Group of eminent persons in and outside Nigeria, who are renowned in their professions and in CPPD’s fields of operation and who support CPPD with their wealth of knowledge and advice.",
-    },
-    {
-      rank: "Management",
-      desc:
-        "The organisation is run by team of all unit heads, the Executive Secretary, and the Executive Director who heads the management.",
-    },
-    {
-      rank: "Members",
-      desc:
-        "These are made up of researchers of different hierarchy, development professionals, academics, peace activists, policy makers, etc.",
-    },
-    {
-      rank: "Staff",
-      desc:
-        "Those employed to work for the organization, including our coordinators of CBOs at the grassroots level (in all local government areas of our host states).",
+      items: [
+        {
+          text: "Board of Trustees",
+          children: [
+            {
+              text: "The highest policy-making body, headed by the chairman.",
+              type: "para",
+            },
+          ],
+        },
+        {
+          text: "Council of Advisers",
+          children: [
+            {
+              text:
+                "Group of eminent persons in and outside Nigeria, who are renowned in their professions and in CPPD’s fields of operation and who support CPPD with their wealth of knowledge and advice.",
+              type: "para",
+            },
+          ],
+        },
+        {
+          text: "Management",
+          children: [
+            {
+              text:
+                "The organisation is run by team of all unit heads, the Executive Secretary, and the Executive Director who heads the management.",
+              type: "para",
+            },
+          ],
+        },
+        {
+          text: "Board of Trustees",
+          children: [
+            {
+              text: "The highest policy-making body, headed by the chairman.",
+              type: "para",
+            },
+          ],
+        },
+      ],
+      style: {
+        seperateIcon: "y",
+        color: "p",
+        weight: "s-b",
+      },
+      type: "list",
     },
   ],
-  vision:
-    "This Organization envisions a humane society where people can live in security and dignity, free from poverty and uncertainty.",
+
+  vision: [
+    {
+      text:
+        "This Organization envisions a humane society where people can live in security and dignity, free from poverty and uncertainty.",
+      type: "para",
+    },
+  ],
   mission: [
     {
       children: [
@@ -219,6 +249,7 @@ const organzation: IOrganization = {
                 color: "p",
                 size: "n",
                 spaceBtw: "2",
+                weight: "s-b",
               },
               type: "list",
             },

@@ -15,6 +15,9 @@ const Layout = (props: IProps) => {
     <div className={styles.container(props)}>
       <Header />
       <ActivitesCarousel />
+      {/* TODO: All the sections below should be made as wrapper and missionContent Component/Elemenet passed as children */}
+      {/* TODO: Bring MissionContent Component out from inside the aboutSection to the same folder level as here */}
+      {/* TODO: Split to pages */}
       <PreambleSection />
       <ActivitesAndEffortsSection />
       <ResearchAreasSection />

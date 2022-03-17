@@ -279,6 +279,7 @@ const organzation: IOrganization = {
         color: "p",
         weight: "b",
         size: "l",
+        margin: "0",
       },
       type: "list",
     },

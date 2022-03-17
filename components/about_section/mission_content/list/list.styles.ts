@@ -2,8 +2,19 @@ import classNames from "classnames";
 import { arrayize, ClassNameGenerator as CNG } from "../../../../utils";
 import { IList } from "./list.interface";
 
-export const container = (props: IList["style"]) => classNames();
-export const item = (props: IList["style"]) => classNames();
+export const container = (props: IList["style"]) => classNames("my-5");
+export const item = (props: IList["style"]) =>
+  CNG.join(
+    new CNG()
+      .values("my-3")
+      .and("0")
+      .values("")
+      .and("1")
+      .values("mx-[3%]")
+      .and("2")
+      .values("mx-[5%]")
+  ).generate(arrayize(props?.margin, "1"));
+
 export const itemTextContainer = (props: IList["style"]) => classNames("flex");
 
 export const itemText = (props: IList["style"]) =>
@@ -17,9 +28,7 @@ export const itemText = (props: IList["style"]) =>
       "before:shrink-0",
       "capitalize",
       "text-justify",
-      "mt-5",
-      "leading-6",
-      "mb-1"
+      "leading-6"
     ),
     new CNG()
       .and("p")

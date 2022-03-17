@@ -54,6 +54,7 @@ export type IList = {
     size: ISizeStyle;
     transform: ITransformStyle;
     icon: IListIconStyle;
+    margin: IMarginStyle;
   }>;
   items: {
     text: string;
@@ -67,3 +68,4 @@ export type IWeightStyle = "b" | "n" | "l";
 export type ISizeStyle = "l" | "n" | "s";
 export type IListIconStyle = "p" | "c-d";
 export type ITransformStyle = "u" | "c" | "l";
+export type IMarginStyle = "0" | "1" | "2";

@@ -52,6 +52,8 @@ export const itemText = (props: IList["style"]) =>
       "leading-6"
     ),
     new CNG().and("y").values("flex", "before:translate-y-full"),
+    // .not("y")
+    // .values("before:-translate-y-[0.45rem]"),
     new CNG()
       .and("p")
       .values("before:bg-pri-900")

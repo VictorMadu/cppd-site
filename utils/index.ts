@@ -23,7 +23,7 @@ export function classNames(...strs: (string | null)[]) {
   strs.forEach((str) => {
     if (str != null) all = all + " " + str.trim();
   });
-  return all;
+  return all.trim();
 }
 
 export class ConditionGroup {

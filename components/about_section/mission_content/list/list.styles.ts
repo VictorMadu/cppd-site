@@ -36,8 +36,6 @@ export const container = (props: IList["style"]) =>
 
 export const item = (props: IList["style"]) => new CNG().generate([]);
 
-export const itemTextContainer = (props: IList["style"]) => classNames("flex");
-
 export const itemText = (props: IList["style"]) =>
   CNG.join(
     new CNG().values(
@@ -51,9 +49,7 @@ export const itemText = (props: IList["style"]) =>
       "text-justify",
       "leading-6"
     ),
-    new CNG().and("y").values("flex", "before:translate-y-full"),
-    // .not("y")
-    // .values("before:-translate-y-[0.45rem]"),
+
     new CNG()
       .and("p")
       .values("before:bg-pri-900")
@@ -69,16 +65,19 @@ export const itemText = (props: IList["style"]) =>
     new CNG()
       .and("b")
       .values("font-bold")
+      .and("s-b")
+      .values("font-semibold")
       .and("n")
       .values("font-normal")
       .and("l")
-      .values("font-light")
+      .values("font-light"),
+    new CNG().and("y").values("flex", "before:translate-y-full")
   ).generate(
     arrayize(),
-    arrayize(props?.seperateIcon, "n"),
     arrayize(props?.color, "n"),
     arrayize(props?.size, "n"),
-    arrayize(props?.weight, "n")
+    arrayize(props?.weight, "n"),
+    arrayize(props?.seperateIcon, "n")
   );
 
 export const Icon = (props: IList["style"]) => classNames();

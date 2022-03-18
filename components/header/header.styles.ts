@@ -46,8 +46,9 @@ export const shortName = (props: IProps) =>
 export const navItems = (props: IProps) =>
   classNames(
     "bg-white",
-    "text-sm md:text-base lg:text-lg",
+    "text-sm",
     "font-bold",
+    "text-slate-900/80",
     "tracking-wider",
     "uppercase",
     "flex",

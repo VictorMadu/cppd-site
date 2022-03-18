@@ -4,8 +4,8 @@ import { IProps } from "./img.interface";
 export const container = (props: IProps, ...otherNames: string[]) =>
   classNames(
     "relative",
-    props?.imgStyles?.width ?? "fit-content",
-    props?.imgStyles?.height ?? "fit-content"
+    props?.imgStyles?.width ?? "w-full",
+    props?.imgStyles?.height ?? "h-full"
   );
 
 export const img = (props: IProps, ...otherNames: string[]) =>

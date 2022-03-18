@@ -1,1 +1,1 @@
-export type IProps = unknown;
+export type IProps = {};

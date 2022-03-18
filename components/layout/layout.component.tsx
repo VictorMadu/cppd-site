@@ -14,16 +14,20 @@ const Layout = (props: IProps) => {
   return (
     <div className={styles.container(props)}>
       <Header />
-      <ActivitesCarousel />
+      <div className="max-w-[60rem] mx-auto">
+        <ActivitesCarousel />
+      </div>
       {/* TODO: All the sections below should be made as wrapper and missionContent Component/Elemenet passed as children */}
       {/* TODO: Bring MissionContent Component out from inside the aboutSection to the same folder level as here */}
       {/* TODO: Split to pages */}
-      <PreambleSection />
-      <ActivitesAndEffortsSection />
-      <ResearchAreasSection />
-      <MembersSection />
-      <AboutSection />
-      <ContactSection />
+      <div className="max-w-[42rem] mx-auto">
+        <PreambleSection />
+        <ActivitesAndEffortsSection />
+        <ResearchAreasSection />
+        <MembersSection />
+        <AboutSection />
+        <ContactSection />
+      </div>
     </div>
   );
 };

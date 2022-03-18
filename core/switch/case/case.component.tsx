@@ -9,7 +9,11 @@ const Case = (props: IProps) => {
     <If
       cond={show}
       Component={
-        (props as IChildren).children ?? (props as IComponent).Component
+        <If
+          cond={!!(props as IChildren).children}
+          Component={<>{(props as IChildren).children}</>}
+          Else={<>{(props as IComponent).Component}</>}
+        />
       }
     />
   );

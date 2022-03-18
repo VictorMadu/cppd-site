@@ -23,25 +23,25 @@ const members = {
   council_of_advisers: [
     {
       name: "Barr. Dr. (Mrs.) Joy Ezeilo",
-      short_about:
+      about:
         "Human rights activist and the United Nations Special Rapporteur on Trafficking in Persons",
     },
     {
       name: "Professor Geoff Harris ",
-      short_about:
+      about:
         "Australian Professor of Economics and Head of Peace and Conflict Studies, University of KwaZulu-Natal, South Africa",
     },
     {
       name: "Chief Mrs. Justina Offiah",
-      short_about: "Legal practitioner and Senior Advocate of Nigeria",
+      about: "Legal practitioner and Senior Advocate of Nigeria",
     },
     {
       name: "Hon. Justice Dr. C.C. Nweze",
-      short_about: "Judge of the Supreme Court of Nigeria",
+      about: "Judge of the Supreme Court of Nigeria",
     },
     {
       name: "Prof. Barr. Emmanuel Ome",
-      short_about: "Department of Philosophy, University of Nigeria, Nsukka",
+      about: "Department of Philosophy, University of Nigeria, Nsukka",
     },
   ],
 

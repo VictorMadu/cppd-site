@@ -24,6 +24,7 @@ export type IParaBase = {
     color: IColorStyle;
     weight: IWeightStyle;
     transform: ITransformStyle;
+    height: IHeightStyle;
   }>;
 };
 
@@ -39,6 +40,7 @@ export type IText = {
     color: IColorStyle;
     weight: IWeightStyle;
     transform: ITransformStyle;
+    height: IHeightStyle;
   }>;
   text: string;
 };
@@ -72,3 +74,4 @@ export type IMarginXStyle = "0" | "1" | "2";
 export type IMarginYStyle = "0" | "1" | "2";
 export type ISpaceBtwStyle = "0" | "1" | "2" | "3";
 export type ISeperateIconStyle = "y" | "n";
+export type IHeightStyle = "0" | "1" | "2";

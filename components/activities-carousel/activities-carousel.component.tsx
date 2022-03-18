@@ -6,7 +6,7 @@ import Img from "../../core/img/img.components";
 import map from "lodash/map";
 import { IProps } from "./activities-carousel.interface";
 import * as styles from "./activities-carousel.styles";
-import MissionContent from "../about_section/mission_content/mission_content.component";
+import Content from "../mission_content";
 
 const ActivitesCarousel = (props: IProps) => {
   const {
@@ -52,7 +52,7 @@ const ActivitesCarousel = (props: IProps) => {
       </Carousel>
       {/* TODO: Move to styles class and this is duplicating the section classes */}
       <div className="text-justify px-[4%] bg-pri-100 py-4">
-        <MissionContent contents={activitiesInPhotos[currIndex].texts} />
+        <Content contents={activitiesInPhotos[currIndex].texts} />
       </div>
     </div>
   );

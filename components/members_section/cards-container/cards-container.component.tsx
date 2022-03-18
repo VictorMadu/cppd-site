@@ -1,7 +1,7 @@
 import React from "react";
 import If from "../../../core/if";
 import Cards from "./cards/cards.component";
-import { IChildren, IComponent, IProps } from "./cards-container.interface";
+import { IProps } from "./cards-container.interface";
 import * as styles from "./cards-container.styles";
 
 const CardsContainer = (props: IProps) => {

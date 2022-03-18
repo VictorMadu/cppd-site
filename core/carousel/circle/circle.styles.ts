@@ -8,5 +8,6 @@ export const container = (props: IProps) =>
     "rounded-full",
     "shadow-2xl",
     "shadow-pri-900",
+    "cursor-pointer",
     props.active ? "bg-pri-900" : "bg-white"
   );

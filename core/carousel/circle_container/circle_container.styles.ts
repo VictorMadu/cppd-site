@@ -9,5 +9,6 @@ export const container = (props: IProps) =>
     "w-full",
     "flex",
     "justify-center",
-    "gap-x-5"
+    "gap-x-5",
+    "z-20"
   );

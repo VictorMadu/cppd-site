@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { arrayize, ClassNameGenerator as CNG } from "../../../../utils";
+import { arrayize, ClassNameGenerator as CNG } from "../../utils";
 import { IList } from "./list.interface";
 
 export const container = (props: IList["style"]) =>

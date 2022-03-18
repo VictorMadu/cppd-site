@@ -6,7 +6,7 @@ import Img from "../../core/img/img.components";
 import map from "lodash/map";
 import { IProps } from "./activities-carousel.interface";
 import * as styles from "./activities-carousel.styles";
-import Content from "../mission_content";
+import Content from "../../core/img/content";
 
 const ActivitesCarousel = (props: IProps) => {
   const {

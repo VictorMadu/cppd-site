@@ -1,7 +1,7 @@
 import React from "react";
 import * as styles from "./group-content.styles";
 import { IProps } from "./group-content.interface";
-import Content from "../../mission_content";
+import Content from "../../../core/img/content";
 
 const GroupContent = (props: IProps) => {
   return (

@@ -1,11 +1,11 @@
 import React from "react";
 import map from "lodash/map";
 import { IList, IProps, IText } from "./content.interface";
-import Text from "../../core/text/text.component";
-import { IContainer, IPara } from "../../languages/en/texts/texts.interface";
-import Switch from "../../core/switch";
-import Paragraph from "../../core/paragraph";
-import List from "./list/list.component";
+import Text from "../../text/text.component";
+import { IContainer, IPara } from "../../../languages/en/texts/texts.interface";
+import Switch from "../../switch";
+import Paragraph from "../../paragraph";
+import List from "../../list/list.component";
 
 const Content = (props: IProps) => {
   return (

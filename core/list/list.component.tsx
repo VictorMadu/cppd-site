@@ -1,6 +1,6 @@
 import React from "react";
 import map from "lodash/map";
-import Content from "../content.component";
+import Content from "../img/content/content.component";
 import { IProps } from "./list.interface";
 import * as styles from "./list.styles";
 

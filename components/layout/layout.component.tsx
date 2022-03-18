@@ -14,20 +14,14 @@ const Layout = (props: IProps) => {
   return (
     <div className={styles.container(props)}>
       <Header />
-      <div className="max-w-[60rem] mx-auto">
-        <ActivitesCarousel />
+      {/* TODO: Use If Component and display Carousel if in home page */}
+      <ActivitesCarousel />
+      <div className={styles.sectionContainer(props)}>
+        <p className={styles.sectionTitle(props)}>{props.title}</p>
+        {props.children}
       </div>
-      {/* TODO: All the sections below should be made as wrapper and missionContent Component/Elemenet passed as children */}
-      {/* TODO: Bring MissionContent Component out from inside the aboutSection to the same folder level as here */}
-      {/* TODO: Split to pages */}
-      <div className="max-w-[42rem] mx-auto">
-        <PreambleSection />
-        <ActivitesAndEffortsSection />
-        <ResearchAreasSection />
-        <MembersSection />
-        <AboutSection />
-        <ContactSection />
-      </div>
+      {/* TODO: Footer Section */}
+      <ContactSection />
     </div>
   );
 };

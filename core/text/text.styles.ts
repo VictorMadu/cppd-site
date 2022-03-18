@@ -1,9 +1,9 @@
+import { IText } from "./text.interface";
 import { arrayize, ClassNameGenerator as CNG } from "../../../../utils";
-import { IParaText } from "./para.interface";
 
-export const container = (props: IParaText["style"]) =>
+export const container = (props: IText["style"]) =>
   CNG.join(
-    new CNG().values("first-letter:ml-4", "mb-2", "[hyphens:manual]"),
+    new CNG().values("[hyphens:manual]"),
     new CNG()
       .and("p")
       .values("text-pri-900")

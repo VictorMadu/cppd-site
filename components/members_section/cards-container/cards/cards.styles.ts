@@ -1,5 +1,4 @@
 import { ClassNameGenerator as CNG } from "../../../../utils";
-import { sectionParagraph } from "../../../layout/layout.styles";
 import { IProps } from "./cards.interface";
 
 export const container = (props: IProps) =>
@@ -31,8 +30,6 @@ export const img = (props: IProps) =>
 
 export const name = (props: IProps) =>
   new CNG().values("font-bold", "whitespace-pre", "mb-4").generate([]);
-
-export const about = sectionParagraph;
 
 export const descContainer = (props: IProps) =>
   new CNG().values("flex", "flex-col", "gap-y-1", "float-left").generate([]);

@@ -16,7 +16,7 @@ const ActivitesCarousel = (props: IProps) => {
     displayIndex,
   } = useCarousel(activitiesInPhotos.length);
   return (
-    <div>
+    <div className={styles.container(props)}>
       <Carousel
         styleClassNames={styles.carousel(props)}
         onPrevClick={displayPrevAction}

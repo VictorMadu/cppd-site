@@ -4,6 +4,7 @@ import { IProps } from "./cards.interface";
 import map from "lodash/map";
 import * as styles from "./cards.styles";
 import If from "../../../../core/if";
+import Text from "../../../../core/text";
 
 const Cards = (props: IProps) => {
   return (
@@ -24,7 +25,7 @@ const Cards = (props: IProps) => {
             }
           />
           <p className={styles.name(props)}>{p.name}</p>
-          <p className={styles.about(props)}>{p.about}</p>
+          <Text content={p.about} />
         </div>
       ))}
     </div>

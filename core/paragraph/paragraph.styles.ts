@@ -1,5 +1,5 @@
-import { arrayize, ClassNameGenerator as CNG } from "../../../../utils";
-import { IParaText } from "./para.interface";
+import { arrayize, ClassNameGenerator as CNG } from "../../utils";
+import { IParaText } from "./paragraph.interface";
 
 export const container = (props: IParaText["style"]) =>
   CNG.join(

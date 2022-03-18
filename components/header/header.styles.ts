@@ -5,7 +5,7 @@ export const container = (props: IProps) =>
   classNames(
     "bg-white",
     "space-y-2",
-    "shadow-md",
+    "shadow",
     "divide-y",
     "divide-slate-300/60",
     "top-0",
@@ -49,7 +49,7 @@ export const navItems = (props: IProps) =>
     "text-sm",
     "font-bold",
     "text-slate-900/80",
-    "tracking-wider",
+    "tracking-wide",
     "uppercase",
     "flex",
     "justify-center",
@@ -60,8 +60,8 @@ export const navItems = (props: IProps) =>
 export const navItem = (props: IProps) =>
   classNames(
     "px-3",
-    "pt-4",
-    "pb-3",
+    "pt-3",
+    "pb-2",
     "rounded",
     "border-b-4",
     "border-b-transparent",

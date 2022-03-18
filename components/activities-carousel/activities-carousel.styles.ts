@@ -1,4 +1,11 @@
 import classNames from "classnames";
+import { ClassNameGenerator as CNG } from "../../utils";
+import { IProps } from "./activities-carousel.interface";
+
+export const container = (props: IProps) =>
+  new CNG()
+    .values("max-w-[60rem]", "mx-auto", "mt-4", "shadow-lg")
+    .generate([]);
 
 export const carousel = (props: unknown, otherNames?: string) => ({
   width: classNames("w-full", otherNames),

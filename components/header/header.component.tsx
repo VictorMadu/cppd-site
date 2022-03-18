@@ -18,6 +18,8 @@ const Header = (props: IProps) => {
       </div>
       <ul className={styles.navItems(props)}>
         <li className={navItemStyles}>Home</li>
+        <li className={navItemStyles}>Activities</li>
+        <li className={navItemStyles}>Research Areas</li>
         <li className={navItemStyles}>About</li>
         <li className={navItemStyles}>Members</li>
       </ul>

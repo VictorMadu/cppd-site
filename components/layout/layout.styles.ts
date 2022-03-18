@@ -4,7 +4,16 @@ import { IProps } from "./layout.interface";
 export const container = (props: IProps) => classNames("");
 
 export const sectionContainer = (props: IProps) =>
-  classNames("mt-14", "px-[4%]", "text-justify", "tracking-tight");
+  classNames(
+    "mt-14",
+    "px-[4%]",
+    "text-justify",
+    "tracking-tight",
+    "max-w-[42rem]",
+    "mx-auto",
+    "max-w-[42rem]",
+    "mx-auto"
+  );
 
 export const sectionTitle = (props: IProps) =>
   classNames(
@@ -15,6 +24,3 @@ export const sectionTitle = (props: IProps) =>
     "capitalize",
     "mb-2"
   );
-
-export const sectionParagraph = (props: unknown) =>
-  classNames("first-letter:ml-4", "mb-2", "leading-8", "[hyphens:manual]");

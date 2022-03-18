@@ -1,14 +1,5 @@
 import classNames from "classnames";
-import {
-  sectionContainer,
-  sectionTitle,
-  sectionParagraph,
-} from "../layout/layout.styles";
 import { IProps } from "./preamble-section.interface";
-
-export { sectionContainer as container };
-export { sectionTitle as title };
-export { sectionParagraph as paragraph };
 
 export const textContainer = (props: IProps) => classNames();
 

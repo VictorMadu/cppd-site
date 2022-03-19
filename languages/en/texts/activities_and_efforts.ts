@@ -5,6 +5,9 @@ const activitiesAndEfforts = {
     {
       text:
         "CPPD has been making some impacts in Nigerian society. Few examples:",
+      style: {
+        weight: "s-b",
+      },
       type: "para",
     },
     {

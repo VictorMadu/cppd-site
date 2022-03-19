@@ -11,6 +11,7 @@ const Img = (props: IProps) => {
         alt={props.alt ?? ""}
         className={styles.img(props)}
         layout="fill"
+        onClick={props.onClick}
       />
     </div>
   );

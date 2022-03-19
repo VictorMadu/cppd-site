@@ -4,5 +4,7 @@ export interface IProps {
   imgStyles?: {
     width?: string;
     height?: string;
+    cursor?: string;
   };
+  onClick?: () => void;
 }

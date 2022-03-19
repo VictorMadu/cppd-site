@@ -7,7 +7,7 @@ import Layout from "../layout";
 
 const ResearchAreasSection = (props: IProps) => {
   return (
-    <Layout title={app.activitiesAndEfforts}>
+    <Layout title={app.researchAreas}>
       <Content contents={researchAreas.contents} />
     </Layout>
   );

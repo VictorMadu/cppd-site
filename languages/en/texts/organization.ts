@@ -7,10 +7,7 @@ const organzation: IOrganization = {
   },
   contacts: {
     secretariat: "B8, No. 33 Ogui Road, Enugu, Nigeria",
-    phone: {
-      country_code: "+234",
-      numbers: ["(0)8038129140", "(0)803321862", "(0)806456445"],
-    },
+    phones: ["+234 (0)8038129140", "+234 (0)803321862", "+234 (0)806456445"],
   },
   structure: [
     {
@@ -250,6 +247,7 @@ const organzation: IOrganization = {
                 size: "n",
                 spaceBtw: "2",
                 weight: "s-b",
+                marginX: "1",
               },
               type: "list",
             },
@@ -316,7 +314,7 @@ const organzation: IOrganization = {
         color: "p",
         weight: "b",
         size: "l",
-        marginY: "1",
+        marginY: "0",
         spaceBtw: "3",
       },
       type: "list",

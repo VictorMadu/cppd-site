@@ -7,10 +7,7 @@ export interface IOrganization {
   };
   contacts: {
     secretariat: string;
-    phone: {
-      country_code: string;
-      numbers: string[];
-    };
+    phones: string[];
   };
   structure: IContainer;
   vision: IContainer;

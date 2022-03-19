@@ -1,12 +1,8 @@
 import type { NextPage } from "next";
-import { Layout } from "../components";
+import PreambleSection from "../components/preamble-section";
 
 const Home: NextPage = () => {
-  return (
-    <div>
-      <Layout />
-    </div>
-  );
+  return <PreambleSection />;
 };
 
 export default Home;

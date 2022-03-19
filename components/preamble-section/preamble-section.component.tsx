@@ -1,4 +1,3 @@
-import { map } from "lodash";
 import React from "react";
 import * as app from "../../languages/en/app";
 import preamble from "../../languages/en/texts/preamble";

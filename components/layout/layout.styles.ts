@@ -9,9 +9,11 @@ export const sectionContainer = (props: IProps) =>
     "px-[4%]",
     "text-justify",
     "tracking-tight",
-    "max-w-[42rem]",
-    "mx-auto",
-    "max-w-[42rem]",
+    props.width === "2"
+      ? "max-w-[64rem]"
+      : props.width === "1"
+      ? "max-w-[56rem]"
+      : "max-w-[42rem]",
     "mx-auto"
   );
 
@@ -20,7 +22,7 @@ export const sectionTitle = (props: IProps) =>
     "text-2xl",
     "text-center",
     "font-bold",
-    "text-pri-900/90",
+    "text-pri-700",
     "capitalize",
-    "mb-2"
+    "mb-8"
   );

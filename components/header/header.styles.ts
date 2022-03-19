@@ -57,7 +57,8 @@ export const navItems = (props: IProps) =>
     "flex",
     "justify-center",
     "items-center ",
-    "overflow-x-auto"
+    "overflow-x-auto",
+    "h-scrollbar"
   );
 
 export const navItem = (props: { isActive: boolean }) =>

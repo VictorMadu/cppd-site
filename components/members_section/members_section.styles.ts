@@ -10,7 +10,8 @@ export const buttonContainer = (props: IProps) =>
       "overflow-x-auto",
       "w-full",
       "border-b-2",
-      "border-neu-300/60 dark:border-neu-600/60"
+      "border-neu-300/60 dark:border-neu-600/60",
+      "h-scrollbar"
     )
     .generate([]);
 

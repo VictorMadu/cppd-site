@@ -22,7 +22,7 @@ export const sectionTitle = (props: IProps) =>
     "text-2xl",
     "text-center",
     "font-bold",
-    "text-pri-600 dark:text-pri-300",
+    "text-pri-700 dark:text-pri-200",
     "capitalize",
     "mb-8"
   );

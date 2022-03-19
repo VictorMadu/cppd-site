@@ -22,7 +22,8 @@ export const logoContainer = (props: IProps) =>
     "font-bold",
     "2xl:text-5xl",
     "px-[2%]",
-    "py-2"
+    "py-2",
+    "grow"
   );
 
 export const imgStyles = (props: IProps) => ({
@@ -35,12 +36,12 @@ export const fullName = (props: IProps) =>
     "uppercase",
     "hidden lg:inline",
     "text-2xl xl:text-3xl 2xl:text-4xl",
-    "text-pri-500 dark:text-pri-400"
+    "text-pri-700 dark:text-pri-200"
   );
 
 export const shortName = (props: IProps) =>
   classNames(
-    "text-pri-500 dark:text-pri-400 lg:text-neu-800/90 dark:lg:text-neu-100/90",
+    "text-pri-700 dark:text-pri-200 lg:text-neu-800/90 dark:lg:text-neu-100/90",
     "text-2xl lg:text-lg xl:text-xl 2xl:text-3xl",
     "lg:italic"
   );
@@ -64,13 +65,14 @@ export const navItem = (props: { isActive: boolean }) =>
     "px-3",
     "pt-3",
     "pb-2",
+    "whitespace-pre",
     "rounded-sm",
     "border-b-2",
     "border-b-transparent",
-    props.isActive ? "text-pri-500 dark:text-pri-400" : "",
+    props.isActive ? "text-pri-700 dark:text-pri-200" : "",
     props.isActive ? "font-bold" : "",
-    props.isActive ? "border-b-pri-500 dark:border-b-pri-400" : "",
-    "hover:text-pri-500 dark:hover:text-pri-400",
-    "focus:text-pri-500 dark:focus:text-pri-400",
+    props.isActive ? "border-b-pri-700 dark:border-b-pri-200" : "",
+    "hover:text-pri-700 dark:hover:text-pri-200",
+    "focus:text-pri-700 dark:focus:text-pri-200",
     "cursor-pointer"
   );

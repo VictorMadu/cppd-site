@@ -20,7 +20,7 @@ const ContactSection = () => {
         </span>
         <span className="text-pri-100 text-sm space-x-2">
           {map(organzation.contacts.phones, (p) => (
-            <span>{p},</span>
+            <span key={p}>{p},</span>
           ))}
         </span>
       </div>

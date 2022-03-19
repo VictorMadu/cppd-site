@@ -6,7 +6,7 @@ export const container = (props: IParaText["style"]) =>
     new CNG().values("indent-4", "mb-2"),
     new CNG()
       .and("p")
-      .values("text-pri-600 dark:text-pri-300")
+      .values("text-pri-700 dark:text-pri-200")
       .not("p")
       .values("text-neu-800/90 dark:text-neu-100/90"),
     new CNG()

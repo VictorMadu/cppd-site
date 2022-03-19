@@ -10,7 +10,8 @@ import List from "../../list/list.component";
 const Content = (props: IProps) => {
   return (
     <>
-      {map(props.contents, (contentProp: IContainer[number], index) => (
+      {/* {map(props.contents, (contentProp: IContainer[number], index) => (
+        
         <Switch value={contentProp.type} key={index}>
           <Switch.Case
             compCase={"para"}
@@ -25,6 +26,18 @@ const Content = (props: IProps) => {
             Component={<List content={contentProp as IList} />}
           />
         </Switch>
+      ))} */}
+
+      {map(props.contents, (contentProp: IContainer[number], index) => (
+        <React.Fragment key={index}>
+          {contentProp.type === "para" ? (
+            <Paragraph content={contentProp} />
+          ) : contentProp.type === "text" ? (
+            <Text content={contentProp} />
+          ) : contentProp.type === "list" ? (
+            <List content={contentProp as IList} />
+          ) : null}
+        </React.Fragment>
       ))}
     </>
   );

@@ -8,12 +8,6 @@ import If from "../../core/if";
 import { useRouter } from "next/router";
 
 export const Layout = (props: IProps) => {
-  // TODO: This is a side effect. Try using a HOC;
-  const [isRendered, setIsRendered] = useState(false);
-  useEffect(() => {
-    setTimeout(() => setIsRendered(true), 100);
-    return () => setIsRendered(false);
-  }, []);
   const router = useRouter();
   return (
     <div className={styles.container(props)}>
@@ -24,11 +18,7 @@ export const Layout = (props: IProps) => {
         <p className={styles.sectionTitle(props)}>{props.title}</p>
         {props.children}
       </div>
-      {/* TODO: Footer Section */}
-      {/* TODO: Performance issue. ContactSection jump from up to down while children is rendering (rendering of children is slow. We need to improve the speed of rendering in children) */}
-      {/* NOTE: I use isRendered to prevent ContactSection from rendering until others have rendered because of the performacnce issue */}
-      {/* NOTE: I suspect Switch component is the cause */}
-      <If cond={isRendered} Component={<ContactSection />} />
+      <ContactSection />
     </div>
   );
 };

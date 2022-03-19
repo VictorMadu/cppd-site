@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { IProps } from "./members_section.interface";
 import * as app from "../../languages/en/app";
-import map from "lodash/map";
 import allMembers from "../../languages/en/texts/members";
 import CardsContainer from "./cards-container/cards-container.component";
 import Layout from "../layout";

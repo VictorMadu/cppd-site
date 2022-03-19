@@ -40,7 +40,6 @@ export const itemText = (props: IList["style"]) =>
   CNG.join(
     new CNG().values(
       "before:content-['']",
-      "before:bg-pri-900",
       "before:inline-block",
       "before:rounded-full",
       "before:mr-4",
@@ -52,9 +51,9 @@ export const itemText = (props: IList["style"]) =>
 
     new CNG()
       .and("p")
-      .values("before:bg-pri-900")
+      .values("before:bg-pri-700 dark:before:bg-pri-200")
       .not("p")
-      .values("before:bg-slate-500"),
+      .values("before:bg-neu-900 dark:before:bg-neu-50"),
     new CNG()
       .and("l")
       .values("before:w-3", "before:h-3")

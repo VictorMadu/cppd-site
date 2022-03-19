@@ -23,14 +23,14 @@ const Header = (props: IProps) => {
       <ul className={styles.navItems(props)}>
         {/* TODO: NavLinks into seperate component and abstract out the className */}
         <li
-          className={styles.navItem({ activePath: router.pathname === "/" })}
+          className={styles.navItem({ isActive: router.pathname === "/" })}
           onClick={() => router.push("/")}
         >
           Home
         </li>
         <li
           className={styles.navItem({
-            activePath: router.pathname === "/activities-and-efforts",
+            isActive: router.pathname === "/activities-and-efforts",
           })}
           onClick={() => router.push("/activities-and-efforts")}
         >
@@ -38,7 +38,7 @@ const Header = (props: IProps) => {
         </li>
         <li
           className={styles.navItem({
-            activePath: router.pathname === "/research-areas",
+            isActive: router.pathname === "/research-areas",
           })}
           onClick={() => router.push("/research-areas")}
         >
@@ -46,7 +46,7 @@ const Header = (props: IProps) => {
         </li>
         <li
           className={styles.navItem({
-            activePath: router.pathname === "/about",
+            isActive: router.pathname === "/about",
           })}
           onClick={() => router.push("/about")}
         >
@@ -54,7 +54,7 @@ const Header = (props: IProps) => {
         </li>
         <li
           className={styles.navItem({
-            activePath: router.pathname === "/members",
+            isActive: router.pathname === "/members",
           })}
           onClick={() => router.push("/members")}
         >

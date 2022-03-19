@@ -3,11 +3,11 @@ import { IProps } from "./header.interface";
 
 export const container = (props: IProps) =>
   classNames(
-    "bg-white",
+    "bg-neu-50 dark:bg-neu-900",
     "space-y-2",
     "shadow",
     "divide-y",
-    "divide-slate-300/60",
+    "divide-neu-300/60 dark:divide-neu-600/60",
     "top-0",
     "transition-all",
     "duration-lg"
@@ -35,20 +35,22 @@ export const fullName = (props: IProps) =>
     "uppercase",
     "hidden lg:inline",
     "text-2xl xl:text-3xl 2xl:text-4xl",
-    "text-pri-700"
+    "text-pri-500 dark:text-pri-400"
   );
 
 export const shortName = (props: IProps) =>
   classNames(
-    "text-pri-700 lg:text-zinc-900 lg:text-opacity-80 text-2xl lg:text-lg xl:text-xl 2xl:text-3xl lg:italic"
+    "text-pri-500 dark:text-pri-400 lg:text-neu-800/90 dark:lg:text-neu-100/90",
+    "text-2xl lg:text-lg xl:text-xl 2xl:text-3xl",
+    "lg:italic"
   );
 
 export const navItems = (props: IProps) =>
   classNames(
-    "bg-white",
+    "bg-neu-50 dark:bg-neu-900",
     "text-sm",
-    "font-bold",
-    "text-slate-900/80",
+    "font-semibold",
+    "text-neu-900/90 dark:text-neu-50/90",
     "tracking-wide",
     "uppercase",
     "flex",
@@ -57,17 +59,18 @@ export const navItems = (props: IProps) =>
     "overflow-x-auto"
   );
 
-export const navItem = (props: IProps) =>
+export const navItem = (props: { isActive: boolean }) =>
   classNames(
     "px-3",
     "pt-3",
     "pb-2",
-    "rounded",
-    "border-b-4",
+    "rounded-sm",
+    "border-b-2",
     "border-b-transparent",
-    "hover:border-b-pri-400",
-    "hover:text-pri-900",
-    "focus:border-b-pri-400",
-    "focus:text-pri-900",
+    props.isActive ? "text-pri-500 dark:text-pri-400" : "",
+    props.isActive ? "font-bold" : "",
+    props.isActive ? "border-b-pri-500 dark:border-b-pri-400" : "",
+    "hover:text-pri-500 dark:hover:text-pri-400",
+    "focus:text-pri-500 dark:focus:text-pri-400",
     "cursor-pointer"
   );

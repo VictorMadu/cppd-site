@@ -4,13 +4,7 @@ import { IProps } from "./activities-carousel.interface";
 
 export const container = (props: IProps) =>
   new CNG()
-    .values(
-      "max-w-[60rem]",
-      "mx-auto",
-      "mt-4",
-      "shadow-lg",
-      "shadow-pri-400/30"
-    )
+    .values("max-w-[60rem]", "mx-auto", "mt-4", "shadow", "shadow-pri-400/10")
     .generate([]);
 
 export const carousel = (props: unknown, otherNames?: string) => ({
@@ -44,11 +38,4 @@ export const carouselTextGroup = (props: { show: boolean }) =>
 export const carouselText = (props: unknown) => classNames("basis-full");
 
 export const overlayImg = (props: unknown) =>
-  classNames(
-    "absolute",
-    "top-0",
-    "left-0",
-    "h-full",
-    "w-full",
-    "bg-pri-500/10"
-  );
+  classNames("absolute", "top-0", "left-0", "h-full", "w-full", "bg-black/50");

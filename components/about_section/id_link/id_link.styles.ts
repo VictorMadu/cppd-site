@@ -7,9 +7,9 @@ export const link = (props: IProps) =>
   classNames(
     "inline-block",
     "px-3",
-    "py-2",
-    "font-bold",
+    "pb-1",
+    "font-semibold",
     "uppercase",
     "text-base",
-    "text-slate-900/60 hover:text-pri-900/80 focus:text-pri-900/80"
+    "hover:text-pri-400 dark:hover:text-pri-300 focus:text-pri-400 dark:focus:text-pri-300"
   );

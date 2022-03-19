@@ -12,7 +12,7 @@ export const card = (props: IProps) =>
       "rounded-lg",
       "px-[5%]",
       "py-6",
-      "bg-white"
+      "bg-neu-50/90 dark:bg-neu-900/90"
     )
     .generate([]);
 
@@ -24,6 +24,7 @@ export const imgContainer = (props: IProps) =>
       "max-w-[15rem]",
       "aspect-square",
       "border-2",
+      "border-neu-300 dark:border-neu-600",
       "rounded-lg",
       "overflow-hidden",
       "float-left",

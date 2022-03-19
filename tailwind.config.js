@@ -1,6 +1,7 @@
 const colors = require("tailwindcss/colors");
 
 module.exports = {
+  darkMode: "class",
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -9,16 +10,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        pri: colors.violet,
-        // "pri-100": defaultTheme.colors("violet-100"),
-        // "pri-200": defaultTheme.colors("violet-200"),
-        // "pri-300": defaultTheme.colors("violet-300"),
-        // "pri-400": defaultTheme.colors("violet-400"),
-        // "pri-500": defaultTheme.colors("violet-500"),
-        // "pri-600": defaultTheme.colors("violet-600"),
-        // "pri-700": defaultTheme.colors("violet-700"),
-        // "pri-800": defaultTheme.colors("violet-800"),
-        // "pri-900": defaultTheme.colors("violet-900"),
+        neu: colors.gray,
+        "pri-50": "#a9d6e5",
+        "pri-100": "#89c2d9",
+        "pri-200": "#61a5c2",
+        "pri-300": "#468faf",
+        "pri-400": "#2c7da0",
+        "pri-500": "#2a6f97",
+        "pri-600": "#014f86",
+        "pri-700": "#01497c",
+        "pri-800": "#013a63",
+        "pri-900": "#012a4a",
       },
     },
   },

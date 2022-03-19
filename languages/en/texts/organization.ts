@@ -55,6 +55,7 @@ const organzation: IOrganization = {
         seperateIcon: "y",
         color: "p",
         weight: "s-b",
+        spaceBtw: "1",
       },
       type: "list",
     },

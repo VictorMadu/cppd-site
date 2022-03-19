@@ -9,10 +9,8 @@ export const linksContainer = (props: IProps) =>
   classNames(
     "flex",
     "justify-center",
-    "border-b",
-    "border-t",
-    "border-b-slate-400/30",
-    "border-t-slate-400/30"
+    "border-b-2",
+    "border-neu-300/60 dark:border-neu-600/60"
   );
 
 export const contentContainer = (props: IProps) =>

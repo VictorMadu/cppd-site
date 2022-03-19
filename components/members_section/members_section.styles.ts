@@ -9,7 +9,8 @@ export const buttonContainer = (props: IProps) =>
       "justify-center",
       "overflow-x-auto",
       "w-full",
-      "border-b-2"
+      "border-b-2",
+      "border-neu-300/60 dark:border-neu-600/60"
     )
     .generate([]);
 
@@ -22,7 +23,9 @@ export const button = (props: { isActive: boolean }) =>
       "whitespace-pre",
       "px-3",
       "py-1.5",
-      props.isActive ? "text-pri-700" : "text-slate-700",
-      !props.isActive ? "hover:text-pri-400" : ""
+      props.isActive
+        ? "text-pri-600 dark:text-pri-300"
+        : "text-neu-800/90 dark:text-neu-100/90",
+      !props.isActive ? "hover:text-pri-400 dark:hover:text-pri-300" : ""
     )
     .generate([]);

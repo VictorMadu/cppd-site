@@ -104,7 +104,7 @@ export const researchAreas = {
       type: "list",
       style: {
         color: "p",
-        weight: "s-b",
+        weight: "b",
         spaceBtw: "3",
       },
     },

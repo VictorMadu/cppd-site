@@ -6,9 +6,9 @@ export const container = (props: IParaText["style"]) =>
     new CNG().values("indent-4", "mb-2"),
     new CNG()
       .and("p")
-      .values("text-pri-900")
+      .values("text-pri-600 dark:text-pri-300")
       .not("p")
-      .values("text-slate-900/80"),
+      .values("text-neu-800/90 dark:text-neu-100/90"),
     new CNG()
       .and("0")
       .values("leading-4")

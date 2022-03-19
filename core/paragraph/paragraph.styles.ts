@@ -3,7 +3,7 @@ import { IParaText } from "./paragraph.interface";
 
 export const container = (props: IParaText["style"]) =>
   CNG.join(
-    new CNG().values("first-letter:ml-4", "mb-2", "[hyphens:manual]"),
+    new CNG().values("indent-4", "mb-2"),
     new CNG()
       .and("p")
       .values("text-pri-900")

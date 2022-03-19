@@ -6,7 +6,14 @@ export const container = (props: IProps) =>
 
 export const card = (props: IProps) =>
   new CNG()
-    .values("w-full", "shadow-xl", "rounded-lg", "px-[5%]", "py-6", "bg-white")
+    .values(
+      "w-full",
+      "shadow-2xl sm:shadow-xl",
+      "rounded-lg",
+      "px-[5%]",
+      "py-6",
+      "bg-white"
+    )
     .generate([]);
 
 export const imgContainer = (props: IProps) =>
@@ -29,7 +36,7 @@ export const img = (props: IProps) =>
   new CNG().values("object-cover").generate([]);
 
 export const name = (props: IProps) =>
-  new CNG().values("font-bold", "whitespace-pre", "mb-4").generate([]);
+  new CNG().values("font-bold", "mb-4").generate([]);
 
 export const descContainer = (props: IProps) =>
   new CNG().values("flex", "flex-col", "gap-y-1", "float-left").generate([]);

@@ -25,9 +25,9 @@ export const container = (props: IList["style"]) =>
       .and("1")
       .values("space-y-4")
       .and("2")
-      .values("space-y-6")
+      .values("space-y-7")
       .and("3")
-      .values("space-y-8")
+      .values("space-y-12")
   ).generate(
     arrayize(props?.marginX, "0"),
     arrayize(props?.marginY, "0"),

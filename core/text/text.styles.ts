@@ -1,5 +1,5 @@
 import { IText } from "./text.interface";
-import { arrayize, ClassNameGenerator as CNG } from "../../../../utils";
+import { arrayize, ClassNameGenerator as CNG } from "../../utils";
 
 export const container = (props: IText["style"]) =>
   CNG.join(
@@ -13,7 +13,7 @@ export const container = (props: IText["style"]) =>
       .and("0")
       .values("leading-4")
       .and("1")
-      .values("leading-6")
+      .values("leading-7")
       .and("2")
       .values("leading-8"),
     new CNG()

@@ -25,7 +25,15 @@ const Cards = (props: IProps) => {
             }
           />
           <p className={styles.name(props)}>{p.name}</p>
-          <Text content={p.about} />
+          <Text
+            content={{
+              text: p.about,
+              type: "text",
+              style: {
+                height: "1",
+              },
+            }}
+          />
         </div>
       ))}
     </div>

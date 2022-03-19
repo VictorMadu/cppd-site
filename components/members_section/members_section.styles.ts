@@ -1,6 +1,28 @@
 import { ClassNameGenerator as CNG } from "../../utils";
-import { sectionContainer, sectionTitle } from "../layout/layout.styles";
 import { IProps } from "./members_section.interface";
 
-export const container = sectionContainer;
-export const title = sectionTitle;
+export const buttonContainer = (props: IProps) =>
+  new CNG()
+    .values(
+      "mb-8",
+      "flex",
+      "justify-center",
+      "overflow-x-auto",
+      "w-full",
+      "border-b-2"
+    )
+    .generate([]);
+
+export const button = (props: { isActive: boolean }) =>
+  new CNG()
+    .values(
+      "text-sm",
+      "uppercase",
+      "font-semibold",
+      "whitespace-pre",
+      "px-3",
+      "py-1.5",
+      props.isActive ? "text-pri-700" : "text-slate-700",
+      !props.isActive ? "hover:text-pri-400" : ""
+    )
+    .generate([]);

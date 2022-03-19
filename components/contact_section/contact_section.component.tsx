@@ -5,21 +5,24 @@ import map from "lodash/map";
 
 const ContactSection = () => {
   return (
-    <div>
-      <div>
-        <div>{app.contacts.secretariat}</div>
-        <div>{organzation.contacts.secretariat}</div>
+    <div className="bg-pri-900 mx-auto w-full px-[4%] py-2 mt-6 flex flex-col md:flex-row gap-y-4 sm:gap-y-1 gap-x-8 justify-center">
+      <div className="space-x-3">
+        <span className="font-bold text-white capitalize">
+          {app.contacts.secretariat}:
+        </span>
+        <span className="text-pri-100 text-sm break-words">
+          {organzation.contacts.secretariat}
+        </span>
       </div>
-      <div>
-        <div>{app.contacts.phone}</div>
-        {/* <div>
-          {map(organzation.contacts.phone.numbers, (no, index) => (
-            <React.Fragment key={index}>
-              <span>{organzation.contacts.phone.country_code}</span>
-              <span>{no}</span>
-            </React.Fragment>
+      <div className="space-x-3">
+        <span className="font-bold text-white capitalize">
+          {app.contacts.phone}:
+        </span>
+        <span className="text-pri-100 text-sm space-x-2">
+          {map(organzation.contacts.phones, (p) => (
+            <span>{p},</span>
           ))}
-        </div> */}
+        </span>
       </div>
     </div>
   );

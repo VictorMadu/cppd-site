@@ -1,10 +1,6 @@
-import React, { useEffect } from "react";
-import { connect, useSelector } from "react-redux";
-import { createStructuredSelector } from "reselect";
-import withHoc from "../../hoc/with-hoc";
+import React from "react";
 import { useAppSelector } from "../../redux";
 import { selectTheme } from "../../redux/app/app.selectors";
-import { getVScrollbarStyle } from "../../utils";
 import { useThemeSwitcher } from "./hooks";
 import { IProps } from "./page-wrapper.interface";
 

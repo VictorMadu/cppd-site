@@ -1,8 +1,8 @@
 import { ExactlyOrArray } from "../../types";
 
 export interface IProps {
-  onPrevClick: () => void;
-  onNextClick: () => void;
+  onPrevClick?: () => void;
+  onNextClick?: () => void;
   styleClassNames: {
     height: string;
     padding?: string;

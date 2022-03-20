@@ -10,7 +10,6 @@ const Carousel = (props: IProps) => {
   return (
     <div className={styles.container(props)}>
       <div className={styles.controlContainer(props)}>
-        {/* TODO: For the onClick not provided, hide */}
         <Controls
           onPrevClick={props.onPrevClick}
           onNextClick={props.onNextClick}

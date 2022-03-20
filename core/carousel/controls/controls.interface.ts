@@ -1,4 +1,4 @@
 export interface IProps {
-  onPrevClick: () => void;
-  onNextClick: () => void;
+  onPrevClick?: () => void;
+  onNextClick?: () => void;
 }

@@ -5,49 +5,47 @@ import {
   faSun,
   faDesktop,
 } from "@fortawesome/free-solid-svg-icons";
-import { IProps, IThemes } from "./theme-switcher.interface";
+import { IProps, IThemesAndIcons } from "./theme-switcher.interface";
 import Dropdown from "./dropdown";
 import { useThemeSwitcher } from "./hooks";
+import * as styles from "./theme-switcher.styles";
 
 const themes = [
   {
-    text: "Light",
+    text: "light",
     icon: faSun,
   },
   {
-    text: "Dark",
+    text: "dark",
     icon: faCloudMoon,
   },
   {
-    text: "System",
+    text: "system",
     icon: faDesktop,
   },
-] as IThemes;
+] as IThemesAndIcons;
 
 const ThemeSwitcher = (props: IProps) => {
   const {
-    activeIndex,
+    currIndex,
     showDropdown,
-    setActiveIndex,
     handleBtnClick,
+    handleDropItem,
   } = useThemeSwitcher(themes);
 
   return (
-    <div className="pr-[4%] sm:pr-8 relative">
-      <button
-        className="rounded-full bg-neu-100 dark:bg-neu-800 hover:bg-neu-200 hover:dark:bg-neu-700 focus:bg-neu-200 focus:dark:bg-neu-700 w-8 h-8 flex items-center justify-center text-neu-800/90 dark:text-neu-100/90 transition-all"
-        onClick={handleBtnClick}
-      >
+    <div className={styles.container(props)}>
+      <button className={styles.btn(props)} onClick={handleBtnClick}>
         <FontAwesomeIcon
-          icon={themes[activeIndex].icon}
+          icon={themes[currIndex].icon}
           size="xs"
           className={""}
         />
       </button>
       <Dropdown
         show={showDropdown}
-        onClick={(selectedIndex: number) => setActiveIndex(selectedIndex)}
-        activeIndex={activeIndex}
+        onClick={(selectedIndex: number) => handleDropItem(selectedIndex)}
+        activeIndex={currIndex}
         themes={themes}
       />
     </div>

@@ -1,49 +1,15 @@
 import { SetStateAction, useEffect, useState } from "react";
-import { IThemes } from "./theme-switcher.interface";
+import findIndex from "lodash/findIndex";
+import { useAppDispatch, useAppSelector } from "../../../redux";
+import { changeTheme } from "../../../redux/app/app.actions";
+import { selectTheme } from "../../../redux/app/app.selectors";
+import { ITheme, IThemesAndIcons } from "./theme-switcher.interface";
 
-const setLight = (document: Document) => {
-  document.documentElement.classList.remove("dark");
-};
-
-const setDark = (document: Document) => {
-  document.documentElement.classList.add("dark");
-};
-
-const setSystem = (window: Window & typeof globalThis, document: Document) => {
-  window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? setDark(document)
-    : setLight(document);
-};
-
-// TODO: Save settings to localStorage and load automatically
-export const setTheme = (
-  window: Window & typeof globalThis,
-  document: Document,
-  themes: IThemes,
-  currIndex: number
-) => {
-  switch (themes[currIndex].text) {
-    case "Light":
-      setLight(document);
-      break;
-    case "Dark":
-      setDark(document);
-      break;
-    case "System":
-      setSystem(window, document);
-      break;
-    default:
-      throw new Error("Unsupported Type");
-  }
-};
-
-export const useThemeSwitcher = (themes: IThemes) => {
-  const [activeIndex, setActiveIndex] = useState(0);
+export const useThemeSwitcher = (themesAndIcons: IThemesAndIcons) => {
   const [showDropdown, setShowDropdown] = useState(false);
-
-  useEffect(() => {
-    setTheme(window, document, themes, activeIndex);
-  }, [activeIndex, themes]);
+  const dispatch = useAppDispatch();
+  const theme = useAppSelector(selectTheme);
+  const currIndex = getCurrIndex(themesAndIcons, theme);
 
   const handleBtnClick = (
     e: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -53,15 +19,15 @@ export const useThemeSwitcher = (themes: IThemes) => {
     clickListner(window, setShowDropdown);
   };
 
-  const handleDropItem = (selectedIndex: number) =>
-    setActiveIndex(selectedIndex);
+  const handleDropItem = (selectedIndex: number) => {
+    dispatch(changeTheme(themesAndIcons[selectedIndex].text));
+  };
 
   return {
-    activeIndex,
+    currIndex,
     showDropdown,
     handleBtnClick,
     handleDropItem,
-    setActiveIndex,
   };
 };
 
@@ -75,4 +41,8 @@ const clickListner = (
   };
 
   window.addEventListener("click", inner);
+};
+
+const getCurrIndex = (themesAndIcons: IThemesAndIcons, theme: ITheme) => {
+  return findIndex(themesAndIcons, (tai) => tai.text === theme);
 };

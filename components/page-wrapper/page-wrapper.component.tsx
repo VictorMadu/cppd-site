@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect, useSelector } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import withHoc from "../../hoc/with-hoc";
 import { useAppSelector } from "../../redux";
 import { selectTheme } from "../../redux/app/app.selectors";
+import { getVScrollbarStyle } from "../../utils";
 import { useThemeSwitcher } from "./hooks";
-import { IProps, ITheme } from "./page-wrapper.interface";
+import { IProps } from "./page-wrapper.interface";
 
 export const PageWrapper = (props: IProps) => {
   useThemeSwitcher(props.theme);

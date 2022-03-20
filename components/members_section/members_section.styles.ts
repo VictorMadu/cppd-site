@@ -24,6 +24,8 @@ export const button = (props: { isActive: boolean }) =>
       "whitespace-pre",
       "px-3",
       "py-1.5",
+      "mb-0.5",
+      "mx-1",
       props.isActive
         ? "text-pri-600 dark:text-pri-300"
         : "text-neu-800/90 dark:text-neu-100/90",

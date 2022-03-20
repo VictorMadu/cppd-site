@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const { default: plugin } = require("tailwindcss/plugin");
 
 module.exports = {
   darkMode: "class",
@@ -10,7 +11,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        neu: colors.gray,
+        neu: colors.slate,
         "pri-50": "#a9d6e5",
         "pri-100": "#89c2d9",
         "pri-200": "#61a5c2",

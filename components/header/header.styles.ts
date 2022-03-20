@@ -58,7 +58,8 @@ export const navItems = (props: IProps) =>
     "justify-center",
     "items-center ",
     "overflow-x-auto",
-    "h-scrollbar"
+    "h-scrollbar",
+    "mx-1"
   );
 
 export const navItem = (props: { isActive: boolean }) =>
@@ -66,6 +67,7 @@ export const navItem = (props: { isActive: boolean }) =>
     "px-3",
     "pt-3",
     "pb-2",
+    "mb-0.5",
     "whitespace-pre",
     "rounded-sm",
     "border-b-2",

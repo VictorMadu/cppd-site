@@ -29,10 +29,12 @@ export const setTheme = (
 
 const setLight = (document: Document) => {
   document.documentElement.classList.remove("dark");
+  document.body.classList.remove("dark");
 };
 
 const setDark = (document: Document) => {
   document.documentElement.classList.add("dark");
+  document.body.classList.add("dark");
 };
 
 const setSystem = (window: Window & typeof globalThis, document: Document) => {

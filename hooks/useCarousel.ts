@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { carousel } from "../constants";
-
+// TODO: Move to component
 const modIncr = (n: number, mod: number, incr = 1) => {
   return (n + incr) % mod;
 };

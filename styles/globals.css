@@ -51,7 +51,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .h-scrollbar::-webkit-scrollbar
 {
-	height: 0.5rem;
+	height: 0.4rem;
 }
 
 .v-scrollbar::-webkit-scrollbar-thumb,

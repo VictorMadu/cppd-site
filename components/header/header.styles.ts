@@ -53,21 +53,23 @@ export const navItems = (props: IProps) =>
     "font-semibold",
     "text-neu-900/90 dark:text-neu-50/90",
     "tracking-wide",
-    "uppercase",
     "flex",
-    "justify-center",
     "items-center ",
+    "mx-1",
     "overflow-x-auto",
-    "h-scrollbar",
-    "mx-1"
+    "h-scrollbar"
   );
 
-export const navItem = (props: { isActive: boolean }) =>
+export const navItem = (props: IProps) =>
+  classNames("first:ml-auto", "last:mr-auto");
+
+export const navItemBtn = (props: { isActive: boolean }) =>
   classNames(
     "px-3",
     "pt-3",
     "pb-2",
     "mb-0.5",
+    "uppercase",
     "whitespace-pre",
     "rounded-sm",
     "border-b-2",
@@ -77,5 +79,6 @@ export const navItem = (props: { isActive: boolean }) =>
     props.isActive ? "border-b-pri-700 dark:border-b-pri-200" : "",
     "hover:text-pri-700 dark:hover:text-pri-200",
     "focus:text-pri-700 dark:focus:text-pri-200",
+    "focus:outline-none",
     "cursor-pointer"
   );

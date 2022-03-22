@@ -51,7 +51,7 @@ const ActivitesCarousel = (props: IProps) => {
         <div className={styles.overlayImg(props)}></div>
       </Carousel>
       {/* TODO: Move to styles class and this is duplicating the section classes */}
-      <div className="text-justify px-[4%] bg-pri-50/10 py-4">
+      <div className="text-justify px-[4%] bg-pri-50/10 py-4 h-[14rem] md:h-[12rem] lg:h-[10rem] overflow-y-auto scrollbar-hide">
         <Content contents={activitiesInPhotos[currIndex].texts} />
       </div>
     </div>

@@ -4,6 +4,7 @@ import { selectTheme } from "../../redux/app/app.selectors";
 import { useThemeSwitcher } from "./hooks";
 import { IProps } from "./page-wrapper.interface";
 
+// For general App settings. Like global and body theme and so on.
 export const PageWrapper = (props: IProps) => {
   useThemeSwitcher(props.theme);
   return <React.Fragment>{props.children}</React.Fragment>;

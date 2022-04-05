@@ -8,10 +8,13 @@ export const card = (props: IProps) =>
   new CNG()
     .values(
       "w-full",
+      "max-w-[20rem]",
+      "sm:max-w-full",
       "shadow-2xl sm:shadow-xl",
       "rounded-lg",
       "px-[5%]",
       "py-6",
+      "mx-auto",
       "bg-neu-50/90 dark:bg-neu-900/90"
     )
     .generate([]);
@@ -21,7 +24,7 @@ export const imgContainer = (props: IProps) =>
     .values(
       "relative",
       "w-full",
-      "max-w-[15rem]",
+      "sm:max-w-[15rem]",
       "aspect-square",
       "border-2",
       "border-neu-300 dark:border-neu-600",

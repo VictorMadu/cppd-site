@@ -38,14 +38,15 @@ const Header = (props: IProps) => {
 
       <ul className={styles.navItems(props)}>
         {map(routes, (route) => (
-          <li
-            key={route.path}
-            className={styles.navItem({
-              isActive: route.path === router.pathname,
-            })}
-            onClick={() => router.push(route.path)}
-          >
-            {route.text}
+          <li key={route.path} className={styles.navItem(props)}>
+            <button
+              className={styles.navItemBtn({
+                isActive: route.path === router.pathname,
+              })}
+              onClick={() => router.push(route.path)}
+            >
+              {route.text}
+            </button>
           </li>
         ))}
       </ul>

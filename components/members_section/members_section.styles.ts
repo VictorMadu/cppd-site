@@ -6,7 +6,6 @@ export const buttonContainer = (props: IProps) =>
     .values(
       "mb-8",
       "flex",
-      "justify-center",
       "overflow-x-auto",
       "w-full",
       "border-b-2",
@@ -26,9 +25,12 @@ export const button = (props: { isActive: boolean }) =>
       "py-1.5",
       "mb-0.5",
       "mx-1",
+      "first:ml-auto",
+      "last:mr-auto",
       props.isActive
         ? "text-pri-600 dark:text-pri-300"
         : "text-neu-800/90 dark:text-neu-100/90",
+      "focus:text-pri-400 dark:focus:text-pri-300 focus:outline-none",
       !props.isActive ? "hover:text-pri-400 dark:hover:text-pri-300" : ""
     )
     .generate([]);

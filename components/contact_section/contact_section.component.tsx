@@ -5,7 +5,7 @@ import map from "lodash/map";
 
 const ContactSection = () => {
   return (
-    <div className="bg-pri-900 mx-auto w-full px-[4%] py-2 mt-6 flex flex-col md:flex-row gap-y-4 sm:gap-y-1 gap-x-8 justify-center">
+    <div className="bg-pri-900 mx-auto w-full px-[4%] py-2 mt-6 flex flex-col lg:flex-row gap-y-2 sm:gap-y-1 gap-x-8 justify-center items-start sm:items-center text-sm">
       <div className="space-x-3">
         <span className="font-bold text-white capitalize">
           {app.contacts.secretariat}:

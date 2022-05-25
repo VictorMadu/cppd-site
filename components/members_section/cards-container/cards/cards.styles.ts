@@ -10,12 +10,13 @@ export const card = (props: IProps) =>
       "w-full",
       "max-w-[20rem]",
       "sm:max-w-full",
-      "shadow-2xl sm:shadow-xl",
+      "[--shadow-color:rgba(0,0,0,0.3)] dark:[--shadow-color:rgba(15,23,42,0.3)]",
+      "[box-shadow:0px_0px_6px_3px_var(--shadow-color)]",
       "rounded-lg",
       "px-[5%]",
       "py-6",
       "mx-auto",
-      "bg-neu-50/90 dark:bg-neu-900/90"
+      "bg-neu-50 dark:bg-neu-900"
     )
     .generate([]);
 
